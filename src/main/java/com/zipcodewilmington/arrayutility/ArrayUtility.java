@@ -67,6 +67,23 @@ public class ArrayUtility<SomeType> {
     }
 
     public SomeType[] removeValue(SomeType valueToRemove){
-        return null;
+        ArrayUtility<SomeType> util = new ArrayUtility<>(inputArray);
+        List<SomeType> removed = new ArrayList<>();
+        for (SomeType element : inputArray){
+            if (!element.equals(valueToRemove)){
+                removed.add(element);
+            }
+        }
+        if (removed.get(0) instanceof Integer) {
+            Integer[] result = removed.toArray(new Integer[]{});
+            return (SomeType[])result;
+        } else if (removed.get(0) instanceof Long){
+            Long[] result = removed.toArray(new Long[]{});
+            return (SomeType[])result;
+        } else if (removed.get(0) instanceof String){
+            String[] result = removed.toArray(new String[]{});
+            return (SomeType[])result;
+        }
+        return (SomeType[])removed.toArray();
     }
 }
