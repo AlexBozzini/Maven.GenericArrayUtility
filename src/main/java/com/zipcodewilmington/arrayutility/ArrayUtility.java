@@ -56,7 +56,14 @@ public class ArrayUtility<SomeType> {
     }
 
     public Integer getNumberOfOccurrences(SomeType valueToEvaluate){
-        return null;
+        Integer count = 0;
+        ArrayUtility<SomeType> util = new ArrayUtility<>(inputArray);
+        for (SomeType element : inputArray){
+            if (element.equals(valueToEvaluate)){
+                count++;
+            }
+        }
+        return count;
     }
 
     public SomeType[] removeValue(SomeType valueToRemove){
