@@ -4,11 +4,19 @@ package com.zipcodewilmington.arrayutility;
  * Created by leon on 3/6/18.
  */
 public class ArrayUtility<SomeType> {
-    public ArrayUtility(SomeType[] inputArray){}
+    private SomeType[] inputArray;
+
+    public ArrayUtility(SomeType[] inputArray){
+        this.inputArray = inputArray;
+    }
 
     public Integer countDuplicatesInMerge(SomeType[] arrayToMerge, SomeType valueToEvaluate){
+        ArrayUtility<SomeType> util = new ArrayUtility<>(inputArray);
+        Integer count = 0;
+        for (SomeType element : inputArray){
 
-        return null;
+
+        }        return null;
     }
 
     public SomeType getMostCommonFromMerge(SomeType[] arrayToMerge){
@@ -16,6 +24,10 @@ public class ArrayUtility<SomeType> {
     }
 
     public Integer getNumberOfOccurrences(SomeType valueToEvaluate){
+        return null;
+    }
+
+    public SomeType[] removeValue(SomeType valueToRemove){
         return null;
     }
 }
