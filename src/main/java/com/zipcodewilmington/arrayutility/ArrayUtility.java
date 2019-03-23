@@ -14,9 +14,16 @@ public class ArrayUtility<SomeType> {
         ArrayUtility<SomeType> util = new ArrayUtility<>(inputArray);
         Integer count = 0;
         for (SomeType element : inputArray){
-
-
-        }        return null;
+            if (element.equals(valueToEvaluate)){
+                count++;
+            }
+        }
+        for (SomeType element : arrayToMerge){
+            if (element.equals(valueToEvaluate)){
+                count++;
+            }
+        }
+        return count;
     }
 
     public SomeType getMostCommonFromMerge(SomeType[] arrayToMerge){
